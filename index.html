@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -350,7 +350,9 @@
     transition: border-color 0.2s, background 0.2s;
   }
   .contact-btn:hover { border-color: var(--green); background: #222; }
-  .contact-btn { cursor: pointer; font-family: "DM Sans", sans-serif; }
+  .contact-btn { cursor: pointer; font-family: "DM Sans", sans-serif; flex-direction: column; align-items: center; text-align: center; gap: 4px; }
+  .btn-detail { font-size: 0.8rem; color: #aaa; }
+  @media (max-width: 600px) { .btn-detail { display: none; } }
   .contact-btn .cb-icon { font-size: 1.4rem; }
 
   /* ── FOOTER ── */
@@ -583,15 +585,15 @@
   <div class="section-title">Get In Touch</div>
   <p class="section-sub">Prefer to reach out directly? We're easy to get ahold of — call, text, or email anytime.</p>
   <div class="contact-btns">
-    <button onclick="showInfo(this, '📞 541-220-9489')" class="contact-btn">
+    <a href="tel:+15412209489" class="contact-btn">
       <span class="cb-icon">📞</span> Leave a Voicemail
-    </button>
-    <button onclick="showInfo(this, '💬 541-220-9489')" class="contact-btn">
+    </a>
+    <a href="sms:+15412209489" class="contact-btn">
       <span class="cb-icon">💬</span> Send a Text
-    </button>
-    <button onclick="showInfo(this, '✉️ valleyjunkremoval10@gmail.com')" class="contact-btn">
+    </a>
+    <a href="mailto:valleyjunkremoval10@gmail.com" class="contact-btn">
       <span class="cb-icon">✉️</span> Send an Email
-    </button>
+    </a>
   </div>
 </section>
 
@@ -618,16 +620,6 @@
       btn.style.background = '';
       btn.disabled = false;
       e.target.reset();
-    }, 4000);
-  }
-
-  function showInfo(btn, info) {
-    const original = btn.innerHTML;
-    btn.innerHTML = '<strong>' + info + '</strong>';
-    btn.style.borderColor = 'var(--green)';
-    setTimeout(() => {
-      btn.innerHTML = original;
-      btn.style.borderColor = '';
     }, 4000);
   }
 
