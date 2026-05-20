@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Albany Haul Away – Junk Removal in Albany, Oregon</title>
+<title>Valley Junk Removal – Junk Removal in Albany, Oregon</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --green: #062c94;
-    --green-light: #1d36c7;
+    --green: #2d7a3a;
+    --green-light: #3a9a4a;
     --green-pale: #eaf4ec;
     --black: #111111;
     --gray-dark: #333333;
@@ -149,7 +149,7 @@
   }
 
   /* ── SECTION WRAPPER ── */
-  section { padding: 80px 6vw; }
+  section { padding: 80px 6vw; text-align: center; }
   .section-label {
     font-size: 0.75rem;
     font-weight: 700;
@@ -168,7 +168,7 @@
     color: var(--gray-mid);
     font-size: 1rem;
     max-width: 520px;
-    margin-bottom: 48px;
+    margin: 0 auto 48px;
   }
 
   /* ── SERVICES ── */
@@ -177,6 +177,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
   }
   .service-card {
     background: var(--white);
@@ -214,6 +216,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 24px;
+    max-width: 960px;
+    margin: 0 auto;
   }
   .step {
     position: relative;
@@ -246,6 +250,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
   }
   .trust-card {
     display: flex;
@@ -271,6 +277,8 @@
     grid-template-columns: 1fr 1fr;
     gap: 18px;
     max-width: 760px;
+    margin: 0 auto;
+    text-align: left;
   }
   .form-group { display: flex; flex-direction: column; gap: 6px; }
   .form-group.full { grid-column: 1 / -1; }
@@ -342,6 +350,7 @@
     transition: border-color 0.2s, background 0.2s;
   }
   .contact-btn:hover { border-color: var(--green); background: #222; }
+  .contact-btn { cursor: pointer; font-family: "DM Sans", sans-serif; }
   .contact-btn .cb-icon { font-size: 1.4rem; }
 
   /* ── FOOTER ── */
@@ -384,7 +393,7 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">[Valley Junk Removal<span>]</span></div>
+  <div class="nav-logo">Valley Junk <span>Removal</span></div>
   <a href="#quote" class="nav-cta">Get a Free Quote</a>
 </nav>
 
@@ -396,7 +405,7 @@
     <p>Fast, local, and budget-friendly hauling for furniture, garage junk, yard debris, appliances, and dump runs. No job too small.</p>
     <div class="hero-btns">
       <a href="#quote" class="btn-primary">Request a Free Quote</a>
-      <a href="sms:+15415550000" class="btn-outline">💬 Text Me Now</a>
+      <a href="sms:+15412209489" class="btn-outline">💬 Text Me Now</a>
     </div>
   </div>
   <div class="hero-graphic">🚛</div>
@@ -517,30 +526,30 @@
   <div class="section-label">Get Started</div>
   <div class="section-title">Request a Free Quote</div>
   <p class="section-sub">Fill this out and we'll get back to you fast — usually the same day.</p>
-  <form class="form-grid" action="https://formspree.io/f/mrejwyvd" method="POST">
+  <form class="form-grid" action="https://formspree.io/f/mrejwyvd" method="POST" enctype="multipart/form-data">
     <div class="form-group">
       <label for="name">Your Name</label>
-      <input type="text" id="name" placeholder="Jane Smith" required>
+      <input type="text" id="name" name="name" placeholder="Jane Smith" required>
     </div>
     <div class="form-group">
       <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" placeholder="(541) 220-9489" required>
+      <input type="tel" id="phone" name="phone" placeholder="541-220-9489" required>
     </div>
     <div class="form-group">
       <label for="email">Email Address</label>
-      <input type="email" id="email" placeholder="jane@email.com">
+      <input type="email" id="email" name="email" placeholder="jane@email.com">
     </div>
     <div class="form-group">
       <label for="address">City / Address</label>
-      <input type="text" id="address" placeholder="Albany, OR or full address">
+      <input type="text" id="address" name="address" placeholder="Albany, OR or full address">
     </div>
     <div class="form-group full">
       <label for="description">What needs to be removed?</label>
-      <textarea id="description" placeholder="Example: old couch, broken washer, bags of yard waste…"></textarea>
+      <textarea id="description" name="description" placeholder="Example: old couch, broken washer, bags of yard waste…"></textarea>
     </div>
     <div class="form-group">
       <label for="amount">Approximate Amount of Junk</label>
-      <select id="amount">
+      <select id="amount" name="amount">
         <option value="">-- Select --</option>
         <option>Just a few items</option>
         <option>Half a truck load</option>
@@ -551,7 +560,7 @@
     </div>
     <div class="form-group">
       <label for="date">Preferred Pickup Date / Time</label>
-      <input type="text" id="date" placeholder="e.g. Saturday morning, ASAP…">
+      <input type="text" id="date" name="date" placeholder="e.g. Saturday morning, ASAP…">
     </div>
     <div class="form-group full">
       <label>Upload Photos (optional but helpful!)</label>
@@ -559,7 +568,7 @@
         <div style="font-size:2rem;">📸</div>
         <p>Click to upload photos of your junk</p>
         <p style="font-size:0.8rem; margin-top:4px; color:#aaa;">JPG, PNG — up to 10 files</p>
-        <input type="file" accept="image/*" multiple>
+        <input type="file" name="photos" accept="image/*" multiple>
       </div>
     </div>
     <div class="form-group full">
@@ -574,27 +583,27 @@
   <div class="section-title">Get In Touch</div>
   <p class="section-sub">Prefer to reach out directly? We're easy to get ahold of — call, text, or email anytime.</p>
   <div class="contact-btns">
-    <a href="tel:+15412209489" class="contact-btn">
-      <span class="cb-icon">📞</span> Call Us
-    </a>
-    <a href="sms:+15412209489" class="contact-btn">
+    <button onclick="showInfo(this, '📞 541-220-9489')" class="contact-btn">
+      <span class="cb-icon">📞</span> Leave a Voicemail
+    </button>
+    <button onclick="showInfo(this, '💬 541-220-9489')" class="contact-btn">
       <span class="cb-icon">💬</span> Send a Text
-    </a>
-    <a href="mailto:calebporter260@gmail.com" class="contact-btn">
+    </button>
+    <button onclick="showInfo(this, '✉️ valleyjunkremoval10@gmail.com')" class="contact-btn">
       <span class="cb-icon">✉️</span> Send an Email
-    </a>
+    </button>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-name">[Your Business<span>]</span></div>
+  <div class="footer-name">Valley Junk <span>Removal</span></div>
   <p>Albany, Oregon</p>
   <p style="margin-top:8px;">
-    📞 <a href="tel:+15412209489">(541) 555-0000</a> &nbsp;·&nbsp;
-    ✉️ <a href="mailto:hello@youremail.com">hello@youremail.com</a>
+    📞 <a href="tel:+15412209489">541-220-9489</a> &nbsp;·&nbsp;
+    ✉️ <a href="mailto:valleyjunkremoval10@gmail.com">valleyjunkremoval10@gmail.com</a>
   </p>
-  <p style="margin-top:20px; font-size:0.8rem;">© 2026 Valley Junk Removal · Albany, Oregon · All rights reserved.</p>
+  <p style="margin-top:20px; font-size:0.8rem;">© 2025 Valley Junk Removal · Albany, Oregon · All rights reserved.</p>
 </footer>
 
 <script>
@@ -609,6 +618,16 @@
       btn.style.background = '';
       btn.disabled = false;
       e.target.reset();
+    }, 4000);
+  }
+
+  function showInfo(btn, info) {
+    const original = btn.innerHTML;
+    btn.innerHTML = '<strong>' + info + '</strong>';
+    btn.style.borderColor = 'var(--green)';
+    setTimeout(() => {
+      btn.innerHTML = original;
+      btn.style.borderColor = '';
     }, 4000);
   }
 
